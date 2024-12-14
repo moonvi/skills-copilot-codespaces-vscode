@@ -1,12 +1,12 @@
 // Create new server
-var http = require('http');
-var fs = require('fs');
-var WebSocketServer = require('ws').Server;
+import { createServer } from 'http';
+import { readFileSync } from 'fs';
+import { Server as WebSocketServer } from 'ws';
 
 // Create a new server
-var server = http.createServer(function(req, res) {
+var server = createServer(function(_req, res) {
   res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.end(fs.readFileSync(__dirname + '/index.html'));
+  res.end(readFileSync(__dirname + '/index.html'));
 });
 
 // Create a new WebSocket server

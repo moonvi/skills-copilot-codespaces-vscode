@@ -1,4 +1,4 @@
-// Create new server
+// Create web server
 import { createServer } from 'http';
 import { readFileSync } from 'fs';
 import { Server as WebSocketServer } from 'ws';
